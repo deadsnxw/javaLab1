@@ -11,6 +11,11 @@ public class Main {
 
             Random random = new Random();
 
+            initalizeMatrix(matrixA, random);
+            initalizeMatrix(matrixB, random);
+
+            addMatrices(matrixA, matrixB, matrixC);
+
 
 
         } catch (Exception e) {
@@ -26,5 +31,11 @@ public class Main {
         }
     }
 
-
+    private static void addMatrices(int[][] matrixA, int[][] matrixB, int[][] matrixC) {
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[i].length; j++) {
+                matrixC[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+    }
 }
