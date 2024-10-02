@@ -16,6 +16,14 @@ public class Main {
 
             addMatrices(matrixA, matrixB, matrixC);
 
+            System.out.println("Matrix A:");
+            printMatrix(matrixA);
+            System.out.println("Matrix B:");
+            printMatrix(matrixB);
+            System.out.println("Matrix C (A + B):");
+            printMatrix(matrixC);
+
+
 
 
         } catch (Exception e) {
@@ -36,6 +44,15 @@ public class Main {
             for (int j = 0; j < matrixA[i].length; j++) {
                 matrixC[i][j] = matrixA[i][j] + matrixB[i][j];
             }
+        }
+    }
+
+    private static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
